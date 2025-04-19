@@ -48,14 +48,14 @@ const Home = () => {
           />
         </div>
       </div>
-      {/* <Trust />
+      <Trust />
       <Expertise />
       <AwardsAndRecognation />
       <Impact />
       <Testimonial />
       <Faqs />
-      <StreamLinedHiring /> */}
-      {/* <Footer /> */}
+      <StreamLinedHiring /> 
+      <Footer />
     </main>
   );
 };
