@@ -16,7 +16,8 @@
     "plugins": [
       {
         "name": "next"
-      }
+      },
+      { "name": "@yarnpkg/pnpify" }
     ],
     "paths": {
       "@/*": ["./*"]

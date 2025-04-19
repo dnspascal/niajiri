@@ -1,26 +1,18 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.custom-segmented .ant-segmented-item-selected {
+  background-color: #f9b641 !important;
+  color: #000 !important;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.custom-segmented .ant-segmented-item:hover {
+  background-color: #f2f0ed !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.custom-segmented .ant-segmented-item {
+    margin-right: 8px; 
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  
+  .custom-segmented .ant-segmented-item:last-child {
+    margin-right: 0;
+  }
