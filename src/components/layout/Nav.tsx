@@ -13,16 +13,16 @@ const Nav = () => {
       <nav className="bg-[#282828] text-white w-full h-14 lg:h-20 flex items-center justify-between px-3 lg:px-10 text-base fixed top-0 left-0 z-50">
         <div className="font-extrabold text-2xl">Niajiri</div>
         <div className="hidden lg:flex items-center gap-8">
-          <div className="space-x-2">
+          <div className="space-x-2 cursor-pointer">
             <span>Why Niajiri</span>
             <ChevronDown className="inline" />
           </div>
-          <div>Partnerships</div>
-          <div className="space-x-2">
+          <div className="cursor-pointer">Partnerships</div>
+          <div className="space-x-2 cursor-pointer">
             <span>Resources</span>
             <ChevronDown className="inline" />
           </div>
-          <div>Contact Us</div>
+          <div className="cursor-pointer">Contact Us</div>
         </div>
         <div className="hidden lg:flex items-center gap-5">
           <Button className="!bg-[#219680] !border-none !text-white !font-bold !px-10 !py-5">
