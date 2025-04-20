@@ -47,13 +47,13 @@ const Nav = () => {
         }`}
       >
         <div className="px-4 pt-6 pb-2">
-          <Button className="!bg-[#219680] !border-none !text-white !font-bold !px-10 !py-5 !w-full">
+          <Button className="!bg-[#219680] !border-none !text-white !font-bold !px-10 !py-5 !w-full !overflow-hidden">
             Request a Demo
           </Button>
         </div>
 
         <div className="flex flex-col items-start justify-center gap-4 px-4 py-6">
-          {NAV_LINKS.map(({ name, icon: Icon, direct }, i) => (
+          {NAV_LINKS.map(({ name, icon: Icon }, i) => (
             <div
               key={i}
               className="flex items-center gap-2 text-lg cursor-pointer justify-between w-full border-b border-white/30 py-2"
