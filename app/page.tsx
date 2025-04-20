@@ -46,7 +46,7 @@ const Home = () => {
           />
         </div>
         {width >= 1280 && (
-          <div className="absolute h-[6.8rem] w-24 right-25 top-21">
+          <div className="absolute h-[6.8rem] w-24 right-25 top-21 hidden xl:block">
             <Image
               src="/img/matrix.png"
               alt=""
