@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
-
+import { Menu, X } from "lucide-react";
 
 export const useNav = () => {
   const [bar, setBar] = useState(false);

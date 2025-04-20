@@ -14,13 +14,10 @@ import Image from "next/image";
 
 const Home = () => {
   const { width } = useDevice();
-  const imageWidth = width < 500 ? 500 : width < 1024 ? 1000 : 500;
-  const imageHeight = width < 500 ? 20 : width < 1024 ? 26 : 80;
-
   return (
-    <main className="">
+    <main className="overflow-hidden">
       <Nav />
-      <div className="bg-[#282828] text-white w-full px-4 lg:px-12 xl:px-32 pt-20 lg:pt-32 pb-12 flex flex-col lg:flex-row justify-between gap-12">
+      <div className="bg-[#282828] text-white w-full px-4 lg:px-12 xl:px-32 pt-20 lg:pt-36 pb-16 flex flex-col lg:flex-row justify-between gap-12">
         <div className="flex flex-col lg:w-1/2 gap-4 lg:gap-12">
           <div className="font-semibold text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
             Empowering Talent, Tranforming Businesses
@@ -38,15 +35,27 @@ const Home = () => {
             </Button>
           </div>
         </div>
-        <div className="w-full lg:w-1/2">
+        <div className="relative w-full lg:w-1/2 h-54 md:h-64 xl:z-30">
           <Image
             src="/img/img-1.png"
             alt=""
-            height={300}
-            width={imageWidth}
-            className={`object-cover rounded-2xl h-80`}
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className={`object-cover rounded-2xl`}
           />
         </div>
+        {width >= 1280 && (
+          <div className="absolute h-[6.8rem] w-24 right-25 top-21">
+            <Image
+              src="/img/matrix.png"
+              alt=""
+              fill
+              priority
+              className={`object-cover rounded-2xl`}
+            />
+          </div>
+        )}
       </div>
       <Trust />
       <Expertise />
@@ -54,7 +63,7 @@ const Home = () => {
       <Impact />
       <Testimonial />
       <Faqs />
-      <StreamLinedHiring /> 
+      <StreamLinedHiring />
       <Footer />
     </main>
   );

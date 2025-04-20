@@ -4,13 +4,16 @@ import Image from "next/image";
 export default function Impact() {
   return (
     <section className="relative flex flex-col items-center justify-center bg-[linear-gradient(to_bottom,#219680_50%,#3b1d25_100%)] text-white p-8">
-      <div className="flex gap-2 text-2xl">
+      <div className="flex gap-2 text-2xl z-10">
         <span className="font-bold"> OUR </span>
         <span>IMPACT</span>
       </div>
-      <div className="grid grid-cols-3 gap-x-48 gap-y-12 p-12">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-48 gap-y-12 p-12 z-10">
         {IMPACTS.map(({ name, value }, i) => (
-          <div key={i} className="flex flex-col items-center justify-center gap-2">
+          <div
+            key={i}
+            className="flex flex-col items-center justify-center gap-2"
+          >
             <span className="text-3xl font-bold">{value}+</span>
             <span className="text-sm font-bold">{name}</span>
           </div>
@@ -22,7 +25,7 @@ export default function Impact() {
           alt={`Award`}
           height={150}
           width={150}
-          className="object-cover rounded-2xl"
+          className="object-cover rounded-2xl -z-[9999]"
         />
       </div>
     </section>
